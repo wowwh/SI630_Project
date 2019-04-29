@@ -13,17 +13,17 @@ Our data are mainly from the Story Cloze Testand  ROCStories  Corpora  in  2016.
 ### 1 Doc2vec
 We use dbow to train our doc2vet model so as to represent each sentence as a vector.
 
-### Cosine
+### 2 Cosine
 Our baseline is to use cosine similarity to directly measure the distance between two given choices with the beginning four sentences.
 
 
-### 2 Logistic
+### 3 Logistic
 We train a logistic regression model to measure whether a ending is true or false. We have two different ways of input. The first is use the full five sentences, and the second is use only the fourth sentence and the last one.
 
 
-### 3 logistic2input
+### 4 logistic2input
 In this method, instead treating the story as a full sentence, while considering the input of the logistic model, the vecter of the first four(or one) sentences are concatenated with the last one. In other words, the dimension is doulbled.
 
 
-### 4 Lstm
+### 5 Lstm
 Lstm Model. Generate a endding and check which given choice is more close to it by cosine similarity.
